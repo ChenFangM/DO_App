@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+
+<head>
+
+  <title> 
+    TEDxSD 23
+  </title>
+
+  <link rel= "stylesheet" type="text/css" href="../static/style.css">
+  <style>
+
+    body {
+      background-color:#FAF6F2; 
+      font-family:verdana;
+      padding: 0px 50px 75px 50px;
+    }
+    h1 {
+      background-color:#231d46;
+      color:#ffffff;
+      text-align:center;
+      padding: 20px;
+    }
+    h2 {
+      color:#D39E8D;
+      text-align:center;
+      padding-top: 10px;
+    }
+    p,ul {
+      color:#683B2B
+    }
+    #codeblock {
+      background-color:#683B2B;
+      color:#ffffff;
+      font-family:Consolas;
+      padding: 10px;
+    }
+    table {
+      border: 2px solid;
+    }
+    th,td {
+      border: 1px solid;
+      padding: 10px;
+    }
+    #footer {
+      background-color:#ffeea5;
+      color:#683B2B;
+      text-align:center;
+      padding: 10px;
+      margin-top: 50px;
+    }
+
+  </style>
+
+</head>
+
+<div style="font-size: xx-small; text-align: right;">
+  <text>
+    Last Updated: 02 April 2023
+  </text>
+</div>
+
+<!-- PAGE -->
+<body>
+  
+  <div>
+    <h1 style>
+      TEDxSD 23 | Chen & Hameed
+    </h1>
+  </div>
+
+  <div> 
+    <h2> What is Pandas? </h2>
+    <p>
+      Pandas is an open-source Python library built on top of Python. The name came from a combination of “Panel Data” and “Python Data Analysis.” And panel data is essentially multi-dimensional data that’s tracked over time.
+    </p>
+
+    <h2> History of Pandas </h2>
+    <p>
+      Pandas’s development started in 2008 by Wes McKinney, who wanted software that was suited for quantitative analysis, because he was working with financial data. It became open source in 2009, and in 2012, the same guy published Python for Data Analysis, a book. In 2015, Pandas was signed into sponsorship under this nonprofit organization NumFOCUS that supports open code, and Pandas is still under development.
+    </p>
+
+    <h2> Uses of Pandas </h2>
+    <p>
+      Pandas is used mainly for data manipulation, analysis, cleaning, and exploring. It’s helpful when dealing with large amounts of data, because that’s what it was made to deal with. You can also use it to see trends in data, like means or correlations across your data. Pandas also cleans up your data, in that it can align your data and it makes it easier to deal with missing data, like deleting rows that are empty or irrelevant.
+    </p>
+    <p>
+      Pandas also offers tools for reading data between different formats, like CSV and text files, Microsoft Excel, and SQLite databases.
+    </p>
+
+    <h2> Pandas vs. NumPy </h2>
+    <p>
+      NumPy is another open-source Python library that’s used for scientific computing, with complex math functions relating to muti-dimensional arrays. So, when do we use Pandas and when do we use NumPy?
+    </p>
+    <p>
+      We can decide based on the type of data that we’re dealing with. If we’re dealing with numerical data, which is data that is a number, then we’ll use NumPy. If we’re dealing with categorical or tabular data, like data you can logically put into a table, Pandas is more well-suited for that. Pandas uses series and data frames, two data structures, whereas NumPy is based more around arrays. NumPy’s multi-dimensional arrays are similar in structure to data frames, but data frames can contain multiple object types. Moreover, Pandas takes up more memory space, since it’s meant to be used with data that has hundreds of thousands of rows.
+    </p>
+
+    <h2> Pandas: Series </h2>
+    <p>
+      A series is a one-dimensional data structure, which is similar to a numPy array.
+    </p>
+    <p>
+      After importing Pandas, define a Series by passing a list of values.
+    </p>
+    <p id="codeblock">
+      s = pd.Series([3,1,4,1,5])
+    </p>
+    <table>
+      <tr>
+        <th> default index </th>
+        <td> 0 </td>
+        <td> 1 </td>
+        <td> 2 </td>
+        <td> 3 </td>
+        <td> 4 </td>
+      </tr>
+      <tr>
+        <th> value </th>
+        <td> 3 </td>
+        <td> 1 </td>
+        <td> 4 </td>
+        <td> 1 </td>
+        <td> 5 </td>
+      </tr>
+    </table>
+    <p> *Visualize vertically </p>
+
+    <h2> Pandas: DataFrame </h2>
+    <p>
+      A data frame is a two-dimensional tabular data structure. Every column of a data frame is a series.
+    </p>
+    <p>
+      Define a DataFrame by passing a dictionary or numPy array.
+    </p>
+    <p id="codeblock">
+      df = pd.DataFrame({ "Name": ["Mykolyk, Topher", "Hameed, Nada", "Chen, Fang Min"], "Age": [-1, 90, 17] })
+    </p>
+    <table>
+      <tr>
+        <th> default index </th>
+        <th> Name </th>
+        <th> Age </th>
+      </tr>
+      <tr>
+        <td> 0 </td>
+        <td> Mykolyk, Topher </td>
+        <td> -1 </td>
+      </tr>
+      <tr>
+        <td> 1 </td>
+        <td> Hameed, Nada </td>
+        <td> 90 </td>
+      </tr>
+      <tr>
+        <td> 2 </td>
+        <td> Chen, Fang Min </td>
+        <td> 17 </th>
+      </tr>
+    </table>
+    
+    <h2> Pandas with Jupyter Notebook </h2>
+    <p>
+      As with any other python code, you can use Pandas in Jupyter Notebook. Jupyter Notebook is especially convenient when using Pandas, due to the easy data visualization. In Pandas, you can create different diagrams with your data frames, like bar plots.
+    </p>
+
+    <h2> A list of cool things you can do with Pandas </h2>
+    <ul>
+      <li> Import and export excel files (.xlsx), csv, etc. </li>
+      <li> Fast data visualization </li>
+      <li> Statistics functions, including describe() </li>
+      <li> Grouping data by categories (used for recommendation lists on platforms like Netflix!) </li>
+      <li> Easy management of numPy null values </li>
+    </ul>
+  </div>
+
+  <div id="footer">
+    <p>
+      <b> Your turn to embark! </b>
+      There's way too many functions, so we won't be covering them in this one-pager, but check out the offical pandas documentation here:
+      <a href="https://pandas.pydata.org/">https://pandas.pydata.org/</a>
+    </p>
+  </div>
+  <p style="text-align:right">
+    - Fang and Nada
+  </p>
+
+</body>
+
+
+</html>
